@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Switch, Route }  from 'react-router-dom'
+
 import './index.css';
-import App from './App';
+import './style/index.css';
+
+import Home from './pages/Home/';
+import About from './pages/About/';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Switch>
+    <Route path="/" exact={true} component={Home} />
+    <Route path="/about" component={About} />
+  </Switch>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
