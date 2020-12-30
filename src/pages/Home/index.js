@@ -1,11 +1,13 @@
 import logo from '../../logo.svg';
 import '../../App.css';
+
+import SideNav from '../../templates/sideNav/'
+
 import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div className="App">
-      <header className="App-header">
+      <SideNav>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Home
@@ -21,8 +23,8 @@ function Home() {
         >
           Learn React
         </a>
-      </header>
-    </div>
+      </SideNav>
+
   );
 }
 
