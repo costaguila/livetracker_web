@@ -1,28 +1,30 @@
+import { Link } from 'react-router-dom'
+
 import logo from '../../logo.svg';
 import '../../App.css';
 
 import SideNav from '../../templates/sideNav/'
 
-import { Link } from 'react-router-dom'
+import Row from 'react-bootstrap/Row'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import "leaflet/dist/leaflet.css";
 
 function Home() {
   return (
       <SideNav>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Home
-        </p>
-        <p>
-        <Link to="/about">Ir para a página sobre \o/</Link>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      <Row style={{ width: "100%", height: "70%", paddingTop: '2em', paddingLeft:'2em' }}>
+        <MapContainer
+        center={[-19.58401, -44.115399]}
+        zoom={12}
+        scrollWheelZoom={true}
+        style={{ width: "100%", height: "100%" }}
         >
-          Learn React
-        </a>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+        </MapContainer>
+      </Row>
       </SideNav>
 
   );
