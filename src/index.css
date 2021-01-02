@@ -11,3 +11,40 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root{
+  --primary-orange: #E7A144;
+  --primary-red: #E65858;
+  --primary-blue: #0057B7;
+  --light-gray: #E3E3E3;
+  --middle-gray: #CECECE;
+
+}
+
+/* TEAMPLATE SIDENAV */
+
+.sidenav{
+  background-color: var(--light-gray);
+  padding-top: 2.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 0px;
+  padding-right: 1em;
+}
+
+.nav-option{
+  border-right: black solid 1px;
+  border-bottom: black solid 1px;
+  transition: 0.5s;
+}
+
+.nav-option:hover{
+  background-color: var(--primary-red);
+  margin-right: -1em;
+}
+
+.main-container{
+  background-color: var(--middle-gray);
+  text-align: center;
+}
